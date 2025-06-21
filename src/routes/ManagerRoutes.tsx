@@ -9,7 +9,7 @@ export function ManagerRoutes() {
     <Routes>
       <Route path="/" element={<AppLayout />}>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/refund/:id" element={<Refund />} />
+        <Route path="/refunds/:id" element={<Refund />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

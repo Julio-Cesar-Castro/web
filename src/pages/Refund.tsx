@@ -25,7 +25,7 @@ export function Refund() {
   const [amount, setAmount] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [file, setFile] = useState<File | null>(null)
-  const [fileURL, setFileURl] = useState<string | null>(null)
+  const [_, setFileURl] = useState<string | null>(null)
 
   const navigate = useNavigate()
   const params = useParams<{ id: string }>()
@@ -61,6 +61,7 @@ export function Refund() {
 
     } catch (error) {
       console.log(error)
+
       if (error instanceof ZodError) {
         return alert(error.issues[0].message)
       }

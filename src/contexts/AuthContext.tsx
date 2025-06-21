@@ -14,7 +14,6 @@ const LOCAL_STORAGE_KEY = "@refund"
 export const AuthContext = createContext({} as AuthContext)
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-
   const [session, setSession] = useState<null | UserAPIResponse>(null)
   const [isLoading, setIsLoading] = useState(true)
 
