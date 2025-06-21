@@ -25,7 +25,7 @@ export function Refund() {
   const [amount, setAmount] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [file, setFile] = useState<File | null>(null)
-  const [_, setFileURl] = useState<string | null>(null)
+  const [fileURL, setFileURl] = useState<string | null>(null)
 
   const navigate = useNavigate()
   const params = useParams<{ id: string }>()
@@ -130,7 +130,7 @@ export function Refund() {
       {
         params.id ?
           (
-            <Link to="https://www.rocketseat.com.br/" target="_blank" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear">
+            <Link to={`http://localhost:3333/uploads/${fileURL}`} target="_blank" className="text-sm text-green-100 font-semibold flex items-center justify-center gap-2 my-6 hover:opacity-70 transition ease-linear">
               <img src={fileSvg} alt="Ícone de arquivo" />
               Abrir Comprovante
             </Link>
